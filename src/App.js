@@ -59,7 +59,6 @@ const Button = ({text, event_handler}) => {
 }
 
 const App = () => {
-  // save clicks of each button to its own state
   const [good, setGood] = useState(0)
   const [neutral, setNeutral] = useState(0)
   const [bad, setBad] = useState(0)
@@ -79,9 +78,9 @@ const App = () => {
   return (
     <div>
       <h1> Give feedback </h1>
-      <Button text="new good" event_handler={increaseGood}/>
-      <Button text="new neutral" event_handler={increaseNeautral}/>
-      <Button text="new bad" event_handler={increaseBad}/>
+      <Button text="good" event_handler={increaseGood}/>
+      <Button text="neutral" event_handler={increaseNeautral}/>
+      <Button text="bad" event_handler={increaseBad}/>
 
       <h1> Statistics </h1>
       <Statistics good={good} neutral={neutral} bad={bad}/>
